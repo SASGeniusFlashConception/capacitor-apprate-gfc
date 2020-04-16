@@ -1,0 +1,7 @@
+{
+  "name": "AppRateGFCDemo",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

@@ -1,10 +1,3 @@
-# capacitor-app-rate-gfc
-Plugin de notation d'une application ionic capacitor. Compatible avec Android X
-
-
-## Installation
-
-```
-$ npm install --save capacitor-app-rate-gfc
-```
-
+# SnackBarGFC - Android
+- [x] [README - FR](https://github.com/SASGeniusFlashConception/capacitor-snackbar-gfc/blob/master/doc/README-FR.md)
+- [x] [README - EN]()
