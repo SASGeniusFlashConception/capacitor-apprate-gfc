@@ -21,29 +21,28 @@
 3. [Screenshot](#3-screenshot) 
 4. [Méthodes du plugin](#4-m%C3%A9thodes-du-plugin) 
 5. [Interfaces du plugin](#5-interfaces-du-plugin)  
-    5.1 [APPRATE_OPTS](#51-)   
-    5.2 [APPRATE_OPTS_CHECK](#52-)  
-    5.3 [BUTTON_STYLE](#53-)        
-    5.4 [APPRATE_INIT](#54-)        
-    5.5 [APP_PUBLISH_STATUT](#55-)        
-    5.6 [APPRATE_STATUT](#56-)        
+    5.1 [APPRATE_OPTS](#51-apprate_opts)   
+    5.2 [APPRATE_OPTS_CHECK](#52-apprate_opts_check)  
+    5.3 [BUTTON_STYLE](#53-button_style)        
+    5.4 [APPRATE_INIT](#54-apprate_init)        
+    5.5 [APP_PUBLISH_STATUT](#55-app_publish_statut)        
+    5.6 [APPRATE_STATUT](56-apprate_statut)        
 6. [Enums du plugin](#6-enums-du-plugin)   
-    6.1 [DURATION_ENUM](#61-duration_enum)   
-    6.2 [POSITION_ENUM](#62-position_enum)  
-    6.3 [TYPE_LINE_ENUM](#63-type_line_enum)  
+    6.1 [MARKET_URL](#61-market_url)   
+    6.2 [STATUT_BTN](#62-statut_btn)  
 7. [Utilisation du plugin](#7-utilisation-du-plugin)  
     7.1 [Intégration du plugin](#71-int%C3%A9gration-du-plugin)  
-    7.2 [Méthode init(options: APPRATE_OPTS)](#72-)  
-    7.3 [Méthode checkAppStatus(options: APPRATE_OPTS_CHECK)](#73-)  
-    7.4 [Méthode showDirectly()](#74-)  
-    7.5 [Méthode addListener('positifRateEvent')](#75-)  
-    7.6 [Méthode addListener('netralRateEvent')](#76-)  
-    7.7 [Méthode addListener('negativeRateEvent')](#77-)  
-    7.8 [Méthode addListener('appIsPublishEvent')](#78-)  
-    7.9 [Méthode addListener('isAllReadyShow')](#79-)  
-8. [Ajouter une icone dans la popup](#8-) 
+    7.2 [Méthode init(options: APPRATE_OPTS)](#72-m%C3%A9thode-initoptions-apprate_opts)  
+    7.3 [Méthode checkAppStatus(options: APPRATE_OPTS_CHECK)](#73-m%C3%A9thode-checkappstatusoptions-apprate_opts_check)  
+    7.4 [Méthode showDirectly()](#74-m%C3%A9thode-showdirectly)  
+    7.5 [Méthode addListener('positifRateEvent')](#75-m%C3%A9thode-addlistenerpositifrateevent)  
+    7.6 [Méthode addListener('netralRateEvent')](#76-m%C3%A9thode-addlistenernetralrateevent)  
+    7.7 [Méthode addListener('negativeRateEvent')](#77-m%C3%A9thode-addlistenernegativerateevent)  
+    7.8 [Méthode addListener('appIsPublishEvent')](#78-m%C3%A9thode-addlistenerappispublishevent)  
+    7.9 [Méthode addListener('isAllReadyShow')](#79-m%C3%A9thode-addlistenerisallreadyshow)  
+8. [Ajouter une icone dans la popup](#8-ajouter-une-icone-dans-la-popup) 
 9. [Demo](#9-demo-du-plugin) 
-10. [Nos autres plugins](#9-nos-autres-plugins) 
+10. [Nos autres plugins](#10-nos-autres-plugins) 
 
 
 ## 1. Plateformes prise en charge
@@ -164,20 +163,14 @@
 | Propriété | Valeur |
 |:----------|:-------|
 | GOOGLE_PLAY_MARKET  | 'market://details?id=' |
-| GOOGLE_PLAY_URL     | 'http://play.google.com/store/apps/details?id=' |
-| APPLE_STORE_MARKET  | 'itms-apps://itunes.apple.com/app/' |  
-| APPLE_STORE_URL     | 'https://itunes.apple.com/app/' |
-| AMAZON_STORE_MARKET | 'amzn://apps/android?p=' |
+| GOOGLE_PLAY_URL     | 'https://play.google.com/store/apps/details?id=' |
+| APPLE_STORE_MARKET  | 'itms-apps://itunes.apple.com/app/id' |  
+| APPLE_STORE_URL     | 'https://itunes.apple.com/en/lookup?bundleId=' |
+| AMAZON_STORE_ANDROID_URL | 'https://www.amazon.com/gp/mas/dl/android?p=' |
+| AMAZON_STORE_MARKET_ANDROID | 'amzn://apps/android?p=' |
 | HUAWEI_APP_GALLERY  | 'appmarket://details?id=' |                                                         
  
-### 6.2 STATUT_APP
-
- | Propriété | Valeur |
- |:----------|:-------|
- | IS_PUBLISH  | 0 |
- | IS_NOT_PUBLISH   | 1  |
- 
-### 6.3 STATUT_BTN
+### 6.2 STATUT_BTN
 
  | Propriété | Valeur |
  |:----------|:-------|
@@ -294,8 +287,11 @@ const {AppRateGFC} = Plugins;
 > Cette évenement est déclenché lorsque l'on utilise la methode checkAppStatus(options: APPRATE_OPTS_CHECK)
 ```typescript
     ngOnInit() {
-        AppRateGFC.addListener('appIsPublishEvent', () => {
-            // votre code...
+        AppRateGFC.addListener('appIsPublishEvent', (statut: APP_PUBLISH_STATUT) => {
+            if(status.appOnPlay)
+            {
+                // votre code...
+            }           
         });
     }
 ```
