@@ -1,5 +1,5 @@
 import {PluginListenerHandle} from "@capacitor/core";
-import {APP_PUBLISH_STATUT, APPRATE_INIT, APPRATE_OPTS, APPRATE_STATUT} from "./interface";
+import {APP_PUBLISH_STATUT, APPRATE_INIT, APPRATE_OPTS, APPRATE_OPTS_CHECK, APPRATE_STATUT} from "./interface";
 
 declare module "@capacitor/core" {
     interface PluginRegistry {
@@ -11,8 +11,11 @@ export interface AppRateGFCPlugin {
     // Initialisation du plugin. Les paramètres sont obligatoires
     init(options: APPRATE_OPTS): Promise<APPRATE_INIT>;
 
-    // Methode permettant de vérifier si l'application est disponible sur le GooglePlay / AppStore
-    checkAppStatus(options: { appPackageId: string; }): Promise<APP_PUBLISH_STATUT>;
+    // Methode permettant de vérifier si l'application est disponible sur le store choisi
+    checkAppStatus(options: APPRATE_OPTS_CHECK): Promise<APP_PUBLISH_STATUT>;
+
+    // Methode permettant d'afficher directement la pop up de notation
+    showDirectly(): Promise<{}>;
 
     // Event déclenché lorsque lutilisateur clique sur le bouton positif
     addListener(eventName: 'positifRateEvent', listenerFunc: (statut: APPRATE_STATUT) => void): PluginListenerHandle;

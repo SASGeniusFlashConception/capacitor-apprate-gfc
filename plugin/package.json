@@ -1,11 +1,14 @@
 {
-  "name": "capacitor-app-rate-gfc",
-  "version": "0.0.1",
+  "name": "capacitor-apprate-gfc",
+  "version": "1.0.0",
   "description": "Plugin de notation d'une application ionic capacitor. Compatible avec Android X",
   "main": "dist/esm/index.js",
   "types": "dist/esm/index.d.ts",
   "scripts": {
     "build": "npm run clean && tsc",
+    "install": "npm install",
+    "publish": "npm run build && npm publish --registry http://localhost:4873",
+    "unpublish": "npm unpublish capacitor-apprate-gfc --registry http://localhost:4873 --force",
     "clean": "rimraf ./dist",
     "watch": "tsc --watch",
     "prepublishOnly": "npm run build"
@@ -30,7 +33,13 @@
   "keywords": [
     "capacitor",
     "plugin",
-    "native"
+    "native",
+    "apprate",
+    "rate",
+    "AppRate",
+    "capacitor-apprate",
+    "rate app"
+
   ],
   "capacitor": {
     "ios": {
@@ -42,9 +51,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/SASGeniusFlashConception/capacitor-app-rate-gfc.git"
+    "url": "https://github.com/SASGeniusFlashConception/capacitor-apprate-gfc.git"
   },
   "bugs": {
-    "url": "https://github.com/SASGeniusFlashConception/capacitor-app-rate-gfc.git/issues"
+    "url": "https://github.com/SASGeniusFlashConception/capacitor-apprate-gfc.git/issues"
   }
 }

@@ -1,39 +1,37 @@
-import {INIT, STATUT_APP, STATUT_BTN, THEME} from "./enum";
+import {MARKET_URL, STATUT_BTN} from "./enum";
 
 export interface APPRATE_OPTS {
-    // Nom de l'application
     appName: string;
-    // Id de l'application - com.exemple.appname
     appPackageId: string;
-    // Theme de la popup
-    theme: THEME
-    // Titre de la popup d'évaluation - le texte %@% sera remplacé par le nom de l'application
+    storeUrl: MARKET_URL;
     titleAppRate: string;
-    // Message de la popup d'évaluation - le texte %@% sera remplacé par le nom de l'application
     messageAppRate: string;
-    // Nombre d'execution de l'application avant ouverture de la popup d'évaluation
     untilPrompt: number;
-    // Nombre de jour avant ouverture de la popup d'évaluation
     daysUntilPrompt: number;
-    // Style du bouton positif
-    positifBtnStyle: BUTTON_STYLE;
-    // Style du bouton neutre
-    netralBtnStyle: BUTTON_STYLE;
-    // Style du bouton négatif
-    negatifBtnStyle: BUTTON_STYLE;
+    positifButtonStyle: BUTTON_STYLE;
+    netralButtonStyle: BUTTON_STYLE;
+    negatifButtonStyle: BUTTON_STYLE;
+    darkMode?: boolean;
+    addAppIcon?: boolean;
+    backgroundColor?: string;
+}
+
+export interface APPRATE_OPTS_CHECK {
+    appPackageId: string;
+    storeUrl: MARKET_URL;
 }
 
 export interface BUTTON_STYLE {
-    text: string;
-    color: string; //Default #000000
+    buttonActionText: string;
+    buttonActionColor?: string;
 }
 
 export interface APPRATE_INIT {
-    appRateInit: INIT
+    appRateInit: boolean;
 }
 
 export interface APP_PUBLISH_STATUT {
-    appOnPlay: STATUT_APP
+    appOnPlay: boolean
 }
 
 export interface APPRATE_STATUT {
