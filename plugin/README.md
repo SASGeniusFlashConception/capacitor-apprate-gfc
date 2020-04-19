@@ -81,7 +81,7 @@
 
 | AppRate Basic | AppRate Dark Mode | AppRate avec AppIcon |
 |---------------|-------------------|----------------------|
-|![Screenshot_1](https://raw.githubusercontent.com/SASGeniusFlashConception/capacitor-apprate-gfc/master/doc/imgDoc/Screenshot_1_portrait.png "Screenshot_1") |![Screenshot_2](https://raw.githubusercontent.com/SASGeniusFlashConception/capacitor-apprate-gfc/master/doc/imgDoc/Screenshot_2_portrait.png?raw=true "Screenshot_2") |![Screenshot_3](https://raw.githubusercontent.com/SASGeniusFlashConception/capacitor-apprate-gfc/master/doc/imgDoc/Screenshot_3_portrait.png?raw=true "Screenshot_3") |
+|![Screenshot_1](https://github.com/SASGeniusFlashConception/capacitor-apprate-gfc/blob/master/doc/imgDoc/Screenshot_1_portrait.png?raw=true "Screenshot_1") |![Screenshot_2](https://github.com/SASGeniusFlashConception/capacitor-apprate-gfc/blob/master/doc/imgDoc/Screenshot_2_portrait.png?raw=true "Screenshot_2") |![Screenshot_3](https://github.com/SASGeniusFlashConception/capacitor-apprate-gfc/blob/master/doc/imgDoc/Screenshot_3_portrait.png?raw=true "Screenshot_3") |
 
 ## 4. Méthodes du plugin
 

@@ -1,14 +1,14 @@
 {
   "name": "capacitor-apprate-gfc",
   "version": "1.0.0",
-  "description": "Plugin de notation d'une application ionic capacitor. Compatible avec Android X",
+  "description": "Le plugin capacitor-apprate-gfc est une implementation native qui permet aux utilisateurs d'évaluer facilement votre application",
   "main": "dist/esm/index.js",
   "types": "dist/esm/index.d.ts",
   "scripts": {
     "build": "npm run clean && tsc",
     "install": "npm install",
-    "publish": "npm run build && npm publish --registry http://localhost:4873",
-    "unpublish": "npm unpublish capacitor-apprate-gfc --registry http://localhost:4873 --force",
+    "publish": "npm run build && npm publish",
+    "unpublish": "npm unpublish capacitor-apprate-gfc",
     "clean": "rimraf ./dist",
     "watch": "tsc --watch",
     "prepublishOnly": "npm run build"
