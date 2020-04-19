@@ -1,0 +1,124 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start" (click)="closeSettings()" class="ion-padding-start">
+            <ion-icon slot="icon-only" name="close"></ion-icon>
+        </ion-buttons>
+        <ion-title>
+            AppRate Settings
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+    <form [formGroup]="formAppRateSettings">
+        <ion-list lines="full" class="ion-no-margin ion-no-padding">
+            <ion-item *ngIf="formAppRateSettings.get('appName')">
+                <ion-label position="stacked"
+                           [innerHTML]="'appName <ion-text color=\'danger\'>*</ion-text>'"></ion-label>
+                <ion-input formControlName="appName" required type="text"></ion-input>
+            </ion-item>
+
+            <ion-item *ngIf="formAppRateSettings.get('appPackageId')">
+                <ion-label position="stacked"
+                           [innerHTML]="'appPackageId <ion-text color=\'danger\'>*</ion-text>'"></ion-label>
+                <ion-input formControlName="appPackageId" required type="text"></ion-input>
+            </ion-item>
+
+            <ion-item *ngIf="formAppRateSettings.get('storeUrl')">
+                <ion-label position="stacked"
+                           [innerHTML]="'storeUrl <ion-text color=\'danger\'>*</ion-text>'"></ion-label>
+                <ion-select formControlName="storeUrl" placeholder="Select One Url" required (ionChange)="selectStoreUrl($event)">
+                    <ion-select-option value="market://details?id=">GOOGLE_PLAY_MARKET</ion-select-option>
+                    <ion-select-option value="http://play.google.com/store/apps/details?id=">GOOGLE_PLAY_URL</ion-select-option>
+                    <ion-select-option value="itms-apps://itunes.apple.com/app/id">APPLE_STORE_MARKET</ion-select-option>
+                    <ion-select-option value="https://itunes.apple.com/app/id'">APPLE_STORE_URL</ion-select-option>
+                    <ion-select-option value="amzn://apps/android?p=">AMAZON_STORE_MARKET</ion-select-option>
+                    <ion-select-option value="appmarket://details?id=">HUAWEI_APP_GALLERY</ion-select-option>
+                </ion-select>
+            </ion-item>
+
+            <ion-item *ngIf="formAppRateSettings.get('titleAppRate')">
+                <ion-label position="stacked"
+                           [innerHTML]="'titleAppRate <ion-text color=\'danger\'>*</ion-text>'"></ion-label>
+                <ion-input formControlName="titleAppRate" required type="text"></ion-input>
+            </ion-item>
+
+            <ion-item *ngIf="formAppRateSettings.get('messageAppRate')">
+                <ion-label position="stacked"
+                           [innerHTML]="'messageAppRate <ion-text color=\'danger\'>*</ion-text>'"></ion-label>
+                <ion-input formControlName="messageAppRate" required type="text"></ion-input>
+            </ion-item>
+
+            <ion-item *ngIf="formAppRateSettings.get('untilPrompt')">
+                <ion-label position="stacked"
+                           [innerHTML]="'untilPrompt <ion-text color=\'danger\'>*</ion-text>\''"></ion-label>
+                <ion-input formControlName="untilPrompt" type="number" min="0"></ion-input>
+            </ion-item>
+
+            <ion-item *ngIf="formAppRateSettings.get('daysUntilPrompt')">
+                <ion-label position="stacked"
+                           [innerHTML]="'daysUntilPrompt <ion-text color=\'danger\'>*</ion-text>\''"></ion-label>
+                <ion-input formControlName="daysUntilPrompt" type="number" min="0"></ion-input>
+            </ion-item>
+
+            <ion-item *ngIf="formAppRateSettings.get('positifButtonStyleText')">
+            <ion-label position="stacked"
+                       [innerHTML]="'positifButtonStyleText <ion-text color=\'danger\'>*</ion-text>'"></ion-label>
+            <ion-input formControlName="positifButtonStyleText" required type="text"></ion-input>
+        </ion-item>
+
+            <ion-item *ngIf="formAppRateSettings.get('messageColor')">
+                <ion-label position="stacked"
+                           [innerHTML]="'positifButtonStyleColor'"></ion-label>
+                <ion-input formControlName="positifButtonStyleColor" type="text" class="ion-text-uppercase"></ion-input>
+            </ion-item>
+
+            <ion-item *ngIf="formAppRateSettings.get('netralButtonStyleText')">
+                <ion-label position="stacked"
+                           [innerHTML]="'netralButtonStyleText <ion-text color=\'danger\'>*</ion-text>'"></ion-label>
+                <ion-input formControlName="netralButtonStyleText" required type="text"></ion-input>
+            </ion-item>
+
+            <ion-item *ngIf="formAppRateSettings.get('netralButtonStyleColor')">
+                <ion-label position="stacked"
+                           [innerHTML]="'netralButtonStyleColor'"></ion-label>
+                <ion-input formControlName="netralButtonStyleColor" type="text" class="ion-text-uppercase"></ion-input>
+            </ion-item>
+
+            <ion-item *ngIf="formAppRateSettings.get('negatifButtonStyleText')">
+                <ion-label position="stacked"
+                           [innerHTML]="'negatifButtonStyleText <ion-text color=\'danger\'>*</ion-text>'"></ion-label>
+                <ion-input formControlName="negatifButtonStyleText" required type="text"></ion-input>
+            </ion-item>
+
+            <ion-item *ngIf="formAppRateSettings.get('negatifButtonStyleColor')">
+                <ion-label position="stacked"
+                           [innerHTML]="'negatifButtonStyleColor'"></ion-label>
+                <ion-input formControlName="negatifButtonStyleColor" type="text" class="ion-text-uppercase"></ion-input>
+            </ion-item>
+
+            <ion-item *ngIf="formAppRateSettings.get('darkMode')">
+                <ion-label position="stacked"
+                           [innerHTML]="'darkMode'"></ion-label>
+                <ion-checkbox formControlName="darkMode" slot="end"  (ionChange)="selectDarkMode($event)"></ion-checkbox>
+            </ion-item>
+            <ion-item *ngIf="formAppRateSettings.get('addAppIcon')">
+                <ion-label position="stacked"
+                           [innerHTML]="'addAppIcon'"></ion-label>
+                <ion-checkbox formControlName="addAppIcon" slot="end"  (ionChange)="selectAddIconApp($event)"></ion-checkbox>
+            </ion-item>
+
+            <ion-item *ngIf="formAppRateSettings.get('backgroundColor')">
+                <ion-label position="stacked"
+                           [innerHTML]="'Background Color'"></ion-label>
+                <ion-input formControlName="backgroundColor" type="text" class="ion-text-uppercase"></ion-input>
+            </ion-item>
+
+        </ion-list>
+        <div class="ion-padding">
+            <ion-button expand="block" (click)="saveSettings()"
+                        [disabled]="!formAppRateSettings.valid"
+                        class="ion-no-margin"
+                        [innerHTML]="'Save settings'"></ion-button>
+        </div>
+    </form>
+</ion-content>

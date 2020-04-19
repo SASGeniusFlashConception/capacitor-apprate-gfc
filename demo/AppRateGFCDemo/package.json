@@ -1,11 +1,18 @@
 {
   "name": "AppRateGFCDemo",
-  "version": "0.0.1",
-  "author": "Ionic Framework",
-  "homepage": "https://ionicframework.com/",
+  "version": "1.0.0",
+  "author": "SAS GeniusFlash Conception",
+  "homepage": "https://www.geniusflash-conception.com/",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "installPlugin": "npm install capacitor-apprate-gfc --save",
+    "uninstallPlugin": "npm uninstall capacitor-apprate-gfc --save",
+    "ionicBuild": "ionic build",
+    "addAndroid": "npx cap add android",
+    "capSync": "npx cap sync",
+    "capCopy": "npx cap copy",
+    "openAndroid": "npx cap open android",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -19,11 +26,13 @@
     "@angular/platform-browser": "~8.2.14",
     "@angular/platform-browser-dynamic": "~8.2.14",
     "@angular/router": "~8.2.14",
+    "@capacitor/android": "^2.0.1",
     "@capacitor/core": "2.0.1",
     "@ionic-native/core": "^5.0.7",
     "@ionic-native/splash-screen": "^5.0.0",
     "@ionic-native/status-bar": "^5.0.0",
     "@ionic/angular": "^5.0.0",
+    "capacitor-apprate-gfc": "^1.0.0",
     "core-js": "^2.5.4",
     "rxjs": "~6.5.1",
     "tslib": "^1.9.0",
@@ -53,5 +62,5 @@
     "tslint": "~5.15.0",
     "typescript": "~3.4.3"
   },
-  "description": "An Ionic project"
+  "description": "Demo du plugin AppRateGFC"
 }

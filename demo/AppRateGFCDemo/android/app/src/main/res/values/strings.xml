@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">AppRateGFCDemo</string>
+    <string name="title_activity_main">AppRateGFCDemo</string>
+    <string name="package_name">com.gfc.apprategfcdemo</string>
+    <string name="custom_url_scheme">com.gfc.apprategfcdemo</string>
+</resources>

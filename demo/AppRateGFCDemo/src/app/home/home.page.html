@@ -1,20 +1,15 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
     <ion-title>
-      Blank
+      AppRate Demo
     </ion-title>
+    <ion-buttons slot="end" (click)="openSettings()" class="ion-padding-end">
+      <ion-icon slot="icon-only" name="construct"></ion-icon>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+<ion-content class="ion-padding">
+  <ion-button expand="full" shape="round" (click)="init()">Init AppRate</ion-button>
+  <ion-button expand="full" shape="round" (click)="check()">Check In Store</ion-button>
+  <ion-button expand="full" shape="round" (click)="show()">Show AppRate</ion-button>
 </ion-content>
