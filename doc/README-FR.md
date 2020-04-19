@@ -26,7 +26,7 @@
     5.3 [BUTTON_STYLE](#53-button_style)        
     5.4 [APPRATE_INIT](#54-apprate_init)        
     5.5 [APP_PUBLISH_STATUT](#55-app_publish_statut)        
-    5.6 [APPRATE_STATUT](56-apprate_statut)        
+    5.6 [APPRATE_STATUT](#56-apprate_statut)        
 6. [Enums du plugin](#6-enums-du-plugin)   
     6.1 [MARKET_URL](#61-market_url)   
     6.2 [STATUT_BTN](#62-statut_btn)  
