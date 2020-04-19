@@ -29,3 +29,17 @@ npm-debug.log*
 /platforms
 /plugins
 /www
+/resources
+/android/.idea
+/android/.gradle
+/android/build
+
+
+
+
+
+
+
+
+
+
