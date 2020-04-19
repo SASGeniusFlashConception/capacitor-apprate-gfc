@@ -81,7 +81,7 @@
 
 | AppRate Basic                                                        | AppRate Dark Mode                                                    | AppRate avec AppIcon                                                    |
 |----------------------------------------------------------------------|----------------------------------------------------------------------|----------------------------------------------------------------------|
-|![Alt text](imgDoc/Screenshot_1_portrait.png?raw=true "Screenshot_1") |![Alt text](imgDoc/Screenshot_2_portrait.png?raw=true "Screenshot_2") |![Alt text](imgDoc/Screenshot_3_portrait.png?raw=true "Screenshot_2") |
+|![Screenshot_1](imgDoc/Screenshot_1_portrait.png?raw=true "Screenshot_1") |![Screenshot_2](imgDoc/Screenshot_2_portrait.png?raw=true "Screenshot_2") |![Screenshot_3](imgDoc/Screenshot_3_portrait.png?raw=true "Screenshot_3") |
 
 ## 4. Méthodes du plugin
 
@@ -105,14 +105,14 @@
 |:----------|:-----|:-----|:-------|:------------|
 | appName | Obligatoire | string | null | Renseigne le nom de l'application |
 | appPackageId | Obligatoire | string | null | Renseigne l'id du package (ex: com.mon.application) |
-| storeUrl | Obligatoire | [MARKET_URL](#52-buttonactionstyleopts) | Object | Renseigne le store où est hébergée l'application |
+| storeUrl | Obligatoire | [MARKET_URL](#61-market_url) | Object | Renseigne le store où est hébergée l'application |
 | titleAppRate | Obligatoire | string | null | Renseigne le titre (en rajoutant **%@** dans le titre il sera remplacé par __appName__) |
 | messageAppRate | Obligatoire | string | null | Renseigne le message (en rajoutant **%@** dans le message, il sera remplacé par __appName__) |
 | untilPrompt | Obligatoire | number | null | Renseigne le nombre d'ouverture de l'application avant affichage de la popup (conseil : 5 ouvertures) |
 | daysUntilPrompt | Obligatoire | number | null | Renseigne le nombre de jour avant affichage de la popup (conseil : 3 ouvertures) |
-| positifButtonStyle| Obligatoire | [BUTTON_STYLE](#52-buttonactionstyleopts) | Object | Renseigne le texte (**Obligatoire**) et la couleur (**Optionel**) du bouton positif (ouverture du store) |
-| netralButtonStyle | Obligatoire | [BUTTON_STYLE](#52-buttonactionstyleopts) | Object | Renseigne le texte (**Obligatoire**) et la couleur (**Optionel**) du bouton neutre  (rappel) |
-| negatifButtonStyle| Obligatoire | [BUTTON_STYLE](#52-buttonactionstyleopts) | Object | Renseigne le texte (**Obligatoire**) et la couleur (**Optionel**) du bouton negatif (ne s'affichera plus jamais) |
+| positifButtonStyle| Obligatoire | [BUTTON_STYLE](#53-button_style) | Object | Renseigne le texte (**Obligatoire**) et la couleur (**Optionel**) du bouton positif (ouverture du store) |
+| netralButtonStyle | Obligatoire | [BUTTON_STYLE](#53-button_style) | Object | Renseigne le texte (**Obligatoire**) et la couleur (**Optionel**) du bouton neutre  (rappel) |
+| negatifButtonStyle| Obligatoire | [BUTTON_STYLE](#53-button_style) | Object | Renseigne le texte (**Obligatoire**) et la couleur (**Optionel**) du bouton negatif (ne s'affichera plus jamais) |
 | darkMode | Optionel | boolean | false | Reseigne l'utilisation du theme Sombre |
 | addAppIcon | Optionel | boolean | false | Renseigne le souhait d'afficher l'icon de l'application dans la popup |
 | backgroundColor | Optionel | string | null | Renseigne la couleur de font de la popup. Les couleurs devront commencer par # et contenir 7 caractères (ex: #4A4747) |
@@ -125,7 +125,7 @@
 | Propriété | Etat | Type | Defaut | Commentaire |
 |:----------|:-----|:-----|:-------|:------------|
 | appPackageId | Obligatoire | string | null | Renseigne l'id du package (ex: com.mon.application) |
-| storeUrl | Obligatoire | [MARKET_URL](#52-buttonactionstyleopts) | Object  | Renseigne le store où est hébergée l'application |
+| storeUrl | Obligatoire | [MARKET_URL](#61-market_url) | Object  | Renseigne le store où est hébergée l'application |
 
 ### 5.3 BUTTON_STYLE
 > Nécessaire pour la méthode init()
@@ -147,14 +147,14 @@
 
 | Propriété   | Type | Commentaire |
 |:------------|:-----|:------------|
-| appOnPlay | [STATUT_APP](#52-buttonactionstyleopts) | Est present ou non dans le store |
+| appOnPlay | boolean | Est present ou non dans le store |
 
 ### 5.6 APPRATE_STATUT
 > Nécessaire pour les evenement __positifRateEvent__, __netralRateEvent__, __negativeRateEvent__
 
 | Propriété | Type | Commentaire |
 |:----------|:-----|:------------|
-| rateStatut | [STATUT_BTN](#52-buttonactionstyleopts) | Bouton cliqué par l'utilisateur |
+| rateStatut | [STATUT_BTN](#62-statut_btn) | Bouton cliqué par l'utilisateur |
 
 ## 6. Enums du plugin
 
