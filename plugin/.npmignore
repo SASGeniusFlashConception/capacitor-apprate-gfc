@@ -1,0 +1,9 @@
+/node_modules
+/.DS_Store
+/dist
+/ios/Pods/
+/.idea
+/.vscode
+/android/build
+/android/.gradle
+/android/.idea
