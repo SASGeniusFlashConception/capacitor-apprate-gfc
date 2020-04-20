@@ -233,9 +233,9 @@ const {AppRateGFC} = Plugins;
                     storeUrl: MARKET_URL.GOOGLE_PLAY_MARKET,
     };
 
-    AppRateGFC.checkAppStatus(optsCheck).catch((error) => ({
+    AppRateGFC.checkAppStatus(optsCheck).catch((error) => {
         // Votre code...
-    }));
+    });
 ```
 
 ### 7.4 Méthode showDirectly()
@@ -243,9 +243,9 @@ const {AppRateGFC} = Plugins;
 
 ```typescript
    
-    AppRateGFC.showDirectly().catch((error) => ({
+    AppRateGFC.showDirectly().catch((error) => {
         // Votre code...
-    }));
+    });
 
 ```
 
