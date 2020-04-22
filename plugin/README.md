@@ -320,6 +320,6 @@ const {AppRateGFC} = Plugins;
 
 | Nom | Package | Version | Plateformes |
 |:----|:--------|:--------|:------------|
-| SnackBarGFC | [capacitor-apprate-gfc](https://github.com/SASGeniusFlashConception/capacitor-snackbar-gfc) | [![Version Npm](https://img.shields.io/npm/v/capacitor-snackbar-gfc)](https://www.npmjs.com/package/capacitor-snackbar-gfc) | Android |
+| SnackBarGFC | [capacitor-snackbar-gfc](https://github.com/SASGeniusFlashConception/capacitor-snackbar-gfc) | [![Version Npm](https://img.shields.io/npm/v/capacitor-snackbar-gfc)](https://www.npmjs.com/package/capacitor-snackbar-gfc) | Android |
 | DateTimePickerGFC | [capacitor-datetimepicker-gfc](https://github.com/SASGeniusFlashConception/capacitor-datetimepicker-gfc) | [![Version Npm](https://img.shields.io/npm/v/capacitor-datetimepicker-gfc)](https://www.npmjs.com/package/capacitor-datetimepicker-gfc) | Android |
 | CalendarEventGFC | [capacitor-calendarevent-gfc](https://github.com/SASGeniusFlashConception/capacitor-calendarevent-gfc) | [![Version Npm](https://img.shields.io/npm/v/capacitor-calendarevent-gfc)](https://www.npmjs.com/package/capacitor-calendarevent-gfc) | Android |
