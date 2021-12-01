@@ -1,16 +1,21 @@
 {
-  "name": "capacitor-apprate-gfc",
+  "name": "@gfc-capacitor/apprate",
   "version": "1.0.1",
-  "description": "Le plugin capacitor-apprate-gfc est une implementation native qui permet aux utilisateurs d'évaluer facilement votre application",
+  "description": "Le plugin @gfc-capacitor/apprate est une implementation native qui permet aux utilisateurs d'évaluer facilement votre application",
   "main": "dist/esm/index.js",
   "types": "dist/esm/index.d.ts",
   "scripts": {
     "build": "npm run clean && tsc",
-    "publish": "npm run build && npm publish",
+    "devPublish": "npm run build && npm publish --registry http://localhost:4873 --force",
+    "devUnpublish": "npm unpublish @gfc-capacitor/apprate --registry http://localhost:4873 --force",
+    "prodPublish": "npm run build && npm publish",
+    "ProdUnpublish": "npm unpublish @gfc-capacitor/apprate",
     "clean": "rimraf ./dist",
     "watch": "tsc --watch",
-    "prepublishOnly": "npm run build",
-    "unpublish": "npm unpublish capacitor-apprate-gfc"
+    "prepublishOnly": "npm run build"
+  },
+  "publishConfig": {
+    "registry": "http://localhost:4873"
   },
   "author": "SAS GeniusFlash Conception",
   "license": "MIT",
